@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div class="loading" *ngIf="!character">
+  <h1>Loading...</h1>
+</div>
+<div *ngIf="character">
+  <h1>{{ character.name }}</h1>
+
+  <p>ID: {{ userId }}</p>
+
+  <div class="character"></div>
+
+  <ul class="list">
+    <li class="list-item">
+      <p>Name</p>
+      <img class="list-item__img" />
+    </li>
+  </ul>
+</div>
+
+<a [routerLink]="['..']">Atrás</a>
