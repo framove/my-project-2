@@ -10,7 +10,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { UserListService } from './user-list/user-list.service';
 import { HeaderComponent } from './header/header.component';
 import { FilterPipe } from './pipes/filter.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import  {  FontAwesomeModule  }  from  '@fortawesome/angular-fontawesome' ;
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +27,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule 
-    
+    HttpClientModule,
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [UserListService],
   bootstrap: [AppComponent]

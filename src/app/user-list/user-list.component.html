@@ -1,11 +1,11 @@
-<app-header></app-header>
+
 <input type="text" class="form-control" name="filterPost" placeholder="Buscar..." [(ngModel)]="filterPost">
 <div class="list">
   <div class="list-item">
     <div class="list-card" *ngFor="let user of userList | filter:filterPost">
       <img class="list-item__img" [src]="user.image">
-      <p>{{user.name}}</p>
-      <button [routerLink]="['/user-list', user.id]">Ver personaje</button>
+      <h2>{{user.name}}</h2>
+      <button class="btn" [routerLink]="['/user-list', user.id]">Ver personaje</button>
     </div>
   </div>
 </div>
