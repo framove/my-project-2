@@ -17,9 +17,9 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     this.userRegisterForm = this.formBuilder.group(
       {
-      name: [''],
-      password: [''],
-      passwordRepeat: [''],
+      name: ['', [Validators.required, Validators.maxLength(20)]],
+      password: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/)]],
+      passwordRepeat: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/)]],
       }
     );
     console.log(this.userRegisterForm);

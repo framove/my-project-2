@@ -4,18 +4,30 @@
     <div class="register-form__input-group">
         <label class="register-form__label" for="name">Nombre</label>
         <input class="register-form__input" type="text" name="name" id="name" formControlName="name" placeholder="Escribe tu nombre">
+
+        <div class="input-error" *ngIf="!userRegisterForm.get('name')?.valid && (userRegisterForm.get('name')?.dirty || submitted)">Nombre incorrecto</div>
+
     </div>
     <div class="register-form__input-group">
         <label class="register-form__label" for="password">Contraseña</label>
-        <input class="register-form__input" type="text" name="password" id="password" formControlName="password" placeholder="Max. 8 caracteres">
+        <input class="register-form__input" type="text" name="password" id="password" formControlName="password" placeholder="Max. 20 caracteres">
+
+        <div class="input-error" *ngIf="!userRegisterForm.get('password')?.valid && (userRegisterForm.get('password')?.dirty || submitted)">Contraseña incorrecta</div>
+
     </div>
     <div class="register-form__input-group">
         <label class="register-form__label" for="passwordRepeat">Repite contraseña</label>
         <input class="register-form__input" type="text" name="passwordRepeat" id="id" formControlName="passwordRepeat">
+
+        <div class="input-error" *ngIf="
+        !userRegisterForm.get('passwordRepeat')?.valid && (userRegisterForm.get('passwordRepeat')?.dirty || submitted)">Contraseña incorrecta</div>
+
     </div>
+    <p *ngIf="userRegisterForm.invalid" >Hay errores en el formulario</p>
         <button class="btn" type="submit">Confirmar</button>
         <a class="text-back" [routerLink]="['/user-list']">Volver</a>
     </div>
+    
 
 </form>
 

@@ -11,7 +11,8 @@ import { UserListService } from './user-list/user-list.service';
 import { HeaderComponent } from './header/header.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import  {  FontAwesomeModule  }  from  '@fortawesome/angular-fontawesome' ;
+import  {  FontAwesomeModule  }  from  '@fortawesome/angular-fontawesome';
+import { AddUserComponent } from './user-list/add-user/add-user.component' ;
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import  {  FontAwesomeModule  }  from  '@fortawesome/angular-fontawesome' ;
     UserDetailComponent,
     NotFoundComponent,
     HeaderComponent,
-    FilterPipe
+    FilterPipe,
+    AddUserComponent
   ],
   imports: [
     FormsModule,
