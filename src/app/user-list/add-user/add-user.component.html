@@ -1,1 +1,12 @@
-<p>add-user works!</p>
+<div class="barra"></div>
+<div class="register-form">
+<div class="register-form__input-group">
+    <label class="register-form__label" for="name">Username</label>
+    <input class="register-form__input" type="text" name="username" id="username" #username (keyup)="saveUsername(username.value)">
+</div>
+<div class="register-form__input-group">
+    <label class="register-form__label" for="image">Image</label>
+    <input class="register-form__input" type="text" name="image" id="image">
+</div> 
+<button class="btn" (click)="createUser()">Crear personaje</button>
+</div>

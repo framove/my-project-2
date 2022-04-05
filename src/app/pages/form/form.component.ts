@@ -26,7 +26,8 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.userRegisterForm)
+    console.log(this.userRegisterForm);
+    alert('Usuario registrado');
   }
 }
 

@@ -1,5 +1,35 @@
+.character {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+.item {
+    justify-content: center;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.list {
+    margin-left: -50px;
+    list-style: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.list-item {
+    margin: 10px;
+}
 
 .img {
-    margin-top: 100px;
+    padding-top: 200px;
     width: 500px;
 }
+

@@ -10,7 +10,7 @@
     </div>
     <div class="register-form__input-group">
         <label class="register-form__label" for="password">Contraseña</label>
-        <input class="register-form__input" type="text" name="password" id="password" formControlName="password" placeholder="Max. 20 caracteres">
+        <input class="register-form__input" type="text" name="password" id="password" formControlName="password" placeholder="Mayúscula, minúscula y número. Min 6 caracteres">
 
         <div class="input-error" *ngIf="!userRegisterForm.get('password')?.valid && (userRegisterForm.get('password')?.dirty || submitted)">Contraseña incorrecta</div>
 

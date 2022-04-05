@@ -1,32 +1,36 @@
-
 <div class="loading" *ngIf="!character">
   <h1>Loading...</h1>
 </div>
+
 <div *ngIf="character">
-  <img class="img" [src]="character.image">
-  <h1>{{ character.name }}</h1>
-
-  <p>ID: {{ userId }}</p>
-
   <div class="character">
-    <ul class="list">
-      <li class="list-item">
-        {{ character.species }}
-      </li>
-      <li class="list-item">
-        {{ character.status }}
-      </li>
-      <li class="list-item">
-        {{ character.location.name }}
-      </li>
-      <li class="list-item">
-        {{ character.origin.name }}
-      </li>
-      <li class="list-item">
-        {{ character.type }}
-      </li>
-    </ul>
+    <div class="item">
+      <img class="img" [src]="character.image" />
+      <h1>{{ character.name }}</h1>
+
+      <p>ID: {{ userId }}</p>
+    </div>
+    <div class="item">
+      <ul class="list">
+        <li class="list-item">
+          {{ character.species }}
+        </li>
+        <li class="list-item">
+          {{ character.status }}
+        </li>
+        <li class="list-item">
+          {{ character.location.name }}
+        </li>
+        <li class="list-item">
+          {{ character.origin.name }}
+        </li>
+        <li class="list-item">
+          {{ character.type }}
+        </li>
+      </ul>
+    </div>
+    </div>
   </div>
 
   <a [routerLink]="['..']">Atrás</a>
-</div>
+
